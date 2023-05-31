@@ -14,6 +14,14 @@ This repo is built as a mono repo: under the `src` repository you will be able t
 
 In this kind of monorepo it is really important to understand that if the code of a shared file is altered, all the services 
 
+### Turborepo
+
+Trigger the info script for each services
+
+```
+
+```
+
 ## Usage
 
 ### Setup AWS credentials

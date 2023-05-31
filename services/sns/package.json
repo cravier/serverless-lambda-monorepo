@@ -1,0 +1,12 @@
+{
+  "name": "sns-service",
+  "description": "SNS lambda service",
+  "authors": "Qate - Clément Ravier",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "info": "serverless info",
+    "remove": "serverless remove"
+  }
+}
