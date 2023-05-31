@@ -1,0 +1,2 @@
+// https://goldspecdigital.com/blog/implementing-basic-auth-with-the-serverless-framework
+// https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html#api-gateway-lambda-authorizer-lambda-function-create

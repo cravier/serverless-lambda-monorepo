@@ -4,23 +4,38 @@ Serverless credentials and profile per stage documentation : [here](https://www.
 
 ## Monorepo
 
-This repo is built as a mono repo: under the `src` repository you will be able to find all the micro services, with a `serverless.yml` for each of them. The shared code is located under the `src/lib` directory.
+This repo is built as a mono repo:
+- All the services are located under the `services` workspace.
+- The code shared between the services is hosted under the `packages` workspace.
 
-📦src
- ┣ 📂services
- ┗ 📂lib
+📦serverless-lambda-monorepo
+  📂packages
+  📂services
+  ┣ 📂ses
+  ┃ ┣ 📜index.js
+  ┃ ┣ 📜package.json
+  ┃ ┗ 📜serverless.yml
+  ┗ 📂sns
+  ┃ ┣ 📜index.js
+  ┃ ┣ 📜package.json
+  ┃ ┗ 📜serverless.yml
 
-### Rules
-
-In this kind of monorepo it is really important to understand that if the code of a shared file is altered, all the services 
+Every serverless service has at least 3 files:
+- `index.js` : entry point of the lambda function
+- `serverless.yml` IaC/serverless framework config file
+- `package.json` dependencies and scripts for this service
 
 ### Turborepo
 
-Trigger the info script for each services
+Generak documentation: https://turbo.build/repo/docs
 
-```
+Why turbo is one of the best option for monorepo: https://turbo.build/repo/docs/core-concepts/monorepos
 
-```
+### pnpm
+
+There is something that turborepo do not manage, it is the packages management (installation/update). pnpm is currently one of the fastest package manager.
+
+https://pnpm.io/pnpm-vs-npm
 
 ## Usage
 
