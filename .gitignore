@@ -1,6 +1,9 @@
 # Serverless directories
 .serverless
 
+# turbo
+.turbo
+
 # Logs
 logs
 *.log
@@ -44,6 +47,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+.pnp
+.pnp.js
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/

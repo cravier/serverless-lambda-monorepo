@@ -1,12 +1,16 @@
-service: serverless-lambda-monorepo
+service: sns-service
 frameworkVersion: '3'
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
 
 provider:
   deploymentMethod: direct
   name: aws
   runtime: nodejs18.x
-  stage: dev
-  region: eu-west-3
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-west-3'}
 
 functions:
   api:
@@ -15,6 +19,3 @@ functions:
       - httpApi:
           path: /
           method: get
-
-plugins:
-  - serverless-offline
